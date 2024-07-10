@@ -87,6 +87,7 @@ a {
   .main-visual {
     height: calc(100vh - 60px);
     margin: 0 auto;
+    width: 100%;
   }
 }
 .main-visual img {
@@ -226,6 +227,11 @@ a {
     background: var(--bg-white);
     text-align: center;
     align-items: center;
+  }
+  .gnav-sns {
+    align-items: center;
+    position: absolute;
+    left: 30%;
   }
   .gnav-menu a {
     font-size: 20px;
