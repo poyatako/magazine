@@ -34,7 +34,7 @@ a {
 }
 
 .header {
-  position: fixed;
+  position: absolute;
   top: 0;
   left: 0;
   width: 200px;
@@ -45,6 +45,7 @@ a {
 }
 .header-logo img {
   width: 80%;
+  margin: 0;
 }
 
 .gnav {
@@ -82,6 +83,11 @@ a {
   background-size: cover;
   align-items: center;
 }
+@media screen and (max-width: 768px) {
+  .main-visual {
+    height: calc(100vh - 60px);
+  }
+}
 .main-visual img {
   position: absolute;
   width: auto;
@@ -89,18 +95,19 @@ a {
   max-width: 1808px;
 }
 .main-visual-text {
-  display: flex;
-  flex-direction: column;
   position: absolute;
   bottom: 5%;
   left: 100px;
   color: var(--text-color);
   z-index: 90;
+  font-size: 1.5vw;
+  min-width: 200px;
+  min-height: 300px;
 }
 .main-visual-text .second-text,
 .main-visual-text .third-text {
   font-size: 2em;
-  font-weight: bold;
+  font-weight: 500;
 }
 .main-visual-text .first-text,
 .main-visual-text .second-text,
@@ -137,21 +144,22 @@ a {
   font-size: 18px;
   font-weight: 600;
 }
-@media screen and (max-width: 768px) {
-  .backnumber-content {
-    flex-wrap: nowrap;
-    justify-content: space-between;
-    flex-basis: 100%;
-  }
-}
 .backnumber-item {
-  display: flex;
   width: 50%;
   flex-direction: column;
   flex-basis: auto;
   padding: 20px 20px 0;
 }
+@media screen and (max-width: 768px) {
+  .backnumber-item {
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    flex-basis: 50%;
+  }
+}
 .backnumber-item img {
+  display: block;
+  margin: 0 auto;
   width: 50%;
   box-shadow: 5px 5px 10px 0px rgba(0, 0, 0, 0.3);
 }
@@ -173,4 +181,59 @@ a {
 }
 .bn-96 {
   background: #f2f5fb;
+}
+
+.gnav-hidden {
+  display: none;
+}
+
+#gnav-btn {
+  display: none;
+}
+
+@media screen and (max-width: 768px) {
+  .header {
+    width: 100%;
+    height: 60px;
+    position: fixed;
+    align-items: center;
+  }
+  .header #gnav-btn {
+    display: block;
+    position: fixed;
+    width: 50px;
+    height: 50px;
+    top: 20px;
+    right: 30px;
+    top: 10px;
+    right: 20px;
+    z-index: 200;
+    background: url(../img/ico-nav.svg) center center no-repeat;
+  }
+  .header-logo {
+    width: 50%;
+    margin: 0 auto;
+  }
+  .gnav {
+    position: fixed;
+    top: 0;
+    right: -120%;
+    z-index: 100;
+    width: 100%;
+    height: 100%;
+    transition: 0.3s;
+    background: var(--bg-white);
+    text-align: center;
+    align-items: center;
+  }
+  .gnav-menu a {
+    font-size: 20px;
+  }
+}
+#gnav-input:checked ~ #gnav-btn {
+  background: url(../img/ico-nav-close.svg) center center no-repeat;
+}
+
+#gnav-input:checked ~ .gnav {
+  right: 0;
 }/*# sourceMappingURL=style.css.map */
