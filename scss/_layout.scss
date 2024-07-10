@@ -1,0 +1,137 @@
+@use './mixins' as * ;
+
+//ヘッダー
+
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 200px;
+  height: 100vh;
+  padding: 10px;
+  z-index: 200;
+  background-color: var(--bg-white);
+
+  &-logo img{
+    width: 80%;
+  }
+}
+
+.gnav {
+  margin: 0 auto;
+  text-align: start;
+
+  &-menu {
+    padding: 50px 0px 0px 20px;
+    
+    li {
+      margin-bottom: 20px;
+      text-decoration: none;
+      font-size: 12px;
+      font-weight: 500;
+    }
+  }
+
+  &-sns {
+    display: flex;
+    position: fixed;
+    bottom: 0;
+    padding: 0px 20px;
+
+    li {
+    padding: 5px;
+    }
+  }
+}
+
+//メイン
+
+.main-visual{
+  display: flex;
+  justify-content: center;
+  position: relative;
+  margin-left: 200px;
+  width: auto;
+  height: 100vh;
+  background: url(../img/mv-bg@2x.jpg) center center no-repeat;
+  background-size: cover;
+  align-items: center;
+  
+  img{
+    position: absolute;
+    width: auto;
+    height: 80vh;
+    max-width: 1808px;
+  }
+
+  &-text {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    bottom: 5%;
+    left: 100px;
+    color: var(--text-color);
+    z-index: 90;
+
+    .second-text,
+    .third-text {
+      font-size: 2em;
+      font-weight: bold;
+    }
+    .first-text,
+    .second-text,
+    .third-text {
+      width: fit-content;
+      padding: 10px;
+      background-color: #fff;
+      margin-top: 20px;
+    }
+  }
+}
+
+//バックナンバー
+
+.backnumber {
+  display: flex;
+  margin-left: 200px;
+  flex-direction: column;
+  flex-grow: 12;
+  flex-wrap: wrap;
+  background-color: #f8f8f8;
+
+  &-title {
+    display: inline-block;
+    margin: 20px 0px 20px 20px;
+  }
+
+
+  &-content img {
+      width: calc(50% – 20px) ;
+    }
+  }
+
+  .bn {
+    &-101 {
+      background: #ecf4f9;
+    }
+
+    &-100 {
+      background: #fbf3d2;
+    }
+
+    &-99 {
+      background: #f9f2eb;
+    }
+
+    &-98 {
+      background: #fae8c2;
+    }
+
+    &-97 {
+      background: #e2efe7;
+    }
+
+    &-96 {
+      background: #f2f5fb;
+    }
+  }

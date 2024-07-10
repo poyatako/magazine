@@ -1,0 +1,143 @@
+@charset "UTF-8";
+:root {
+  --text-color: #333;
+  --bg-white: #fff;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration-line: none;
+}
+
+li {
+  list-style: none;
+}
+
+body {
+  font-family: "Noto Sans JP", sans-serif;
+  font-weight: 400;
+  color: #333;
+  background-color: var(--bg-white);
+}
+
+.gnav-menu li {
+  text-transform: uppercase;
+}
+
+a {
+  color: #333;
+}
+
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 200px;
+  height: 100vh;
+  padding: 10px;
+  z-index: 200;
+  background-color: var(--bg-white);
+}
+.header-logo img {
+  width: 80%;
+}
+
+.gnav {
+  margin: 0 auto;
+  text-align: start;
+}
+.gnav-menu {
+  padding: 50px 0px 0px 20px;
+}
+.gnav-menu li {
+  margin-bottom: 20px;
+  text-decoration: none;
+  font-size: 12px;
+  font-weight: 500;
+}
+.gnav-sns {
+  display: flex;
+  position: fixed;
+  bottom: 0;
+  padding: 0px 20px;
+}
+.gnav-sns li {
+  padding: 5px;
+}
+
+.main-visual {
+  display: flex;
+  justify-content: center;
+  position: relative;
+  margin-left: 200px;
+  width: auto;
+  height: 100vh;
+  background: url(../img/mv-bg@2x.jpg) center center no-repeat;
+  background-size: cover;
+  align-items: center;
+}
+.main-visual img {
+  position: absolute;
+  width: auto;
+  height: 80vh;
+  max-width: 1808px;
+}
+.main-visual-text {
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  bottom: 5%;
+  left: 100px;
+  color: var(--text-color);
+  z-index: 90;
+}
+.main-visual-text .second-text,
+.main-visual-text .third-text {
+  font-size: 2em;
+  font-weight: bold;
+}
+.main-visual-text .first-text,
+.main-visual-text .second-text,
+.main-visual-text .third-text {
+  width: fit-content;
+  padding: 10px;
+  background-color: #fff;
+  margin-top: 20px;
+}
+
+.backnumber {
+  display: flex;
+  margin-left: 200px;
+  flex-direction: column;
+  flex-grow: 12;
+  flex-wrap: wrap;
+  background-color: #f8f8f8;
+}
+.backnumber-title {
+  display: inline-block;
+  margin: 20px 0px 20px 20px;
+}
+.backnumber-content img {
+  width: calc(50% – 20px);
+}
+
+.bn-101 {
+  background: #ecf4f9;
+}
+.bn-100 {
+  background: #fbf3d2;
+}
+.bn-99 {
+  background: #f9f2eb;
+}
+.bn-98 {
+  background: #fae8c2;
+}
+.bn-97 {
+  background: #e2efe7;
+}
+.bn-96 {
+  background: #f2f5fb;
+}/*# sourceMappingURL=style.css.map */
