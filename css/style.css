@@ -1,4 +1,3 @@
-@charset "UTF-8";
 :root {
   --text-color: #333;
   --bg-white: #fff;
@@ -23,6 +22,10 @@ body {
 }
 
 .gnav-menu li {
+  text-transform: uppercase;
+}
+
+h3 {
   text-transform: uppercase;
 }
 
@@ -72,6 +75,7 @@ a {
   justify-content: center;
   position: relative;
   margin-left: 200px;
+  margin-bottom: 0;
   width: auto;
   height: 100vh;
   background: url(../img/mv-bg@2x.jpg) center center no-repeat;
@@ -102,25 +106,54 @@ a {
 .main-visual-text .second-text,
 .main-visual-text .third-text {
   width: fit-content;
-  padding: 10px;
   background-color: #fff;
   margin-top: 20px;
 }
 
 .backnumber {
-  display: flex;
   margin-left: 200px;
-  flex-direction: column;
-  flex-grow: 12;
-  flex-wrap: wrap;
+  padding-top: 20px;
   background-color: #f8f8f8;
 }
 .backnumber-title {
-  display: inline-block;
-  margin: 20px 0px 20px 20px;
+  display: block;
+  margin: 0px 0px 20px 20px;
 }
-.backnumber-content img {
-  width: calc(50% – 20px);
+.backnumber-title h3 {
+  font-size: 20px;
+}
+.backnumber-title p {
+  font-size: 12px;
+}
+.backnumber-content {
+  display: flex;
+  flex-wrap: wrap;
+}
+.backnumber-content p {
+  padding: 20px;
+  font-weight: 300;
+}
+.backnumber-content li span {
+  font-size: 18px;
+  font-weight: 600;
+}
+@media screen and (max-width: 768px) {
+  .backnumber-content {
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    flex-basis: 100%;
+  }
+}
+.backnumber-item {
+  display: flex;
+  width: 50%;
+  flex-direction: column;
+  flex-basis: auto;
+  padding: 20px 20px 0;
+}
+.backnumber-item img {
+  width: 50%;
+  box-shadow: 5px 5px 10px 0px rgba(0, 0, 0, 0.3);
 }
 
 .bn-101 {

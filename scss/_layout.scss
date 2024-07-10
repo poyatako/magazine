@@ -51,6 +51,7 @@
   justify-content: center;
   position: relative;
   margin-left: 200px;
+  margin-bottom: 0;
   width: auto;
   height: 100vh;
   background: url(../img/mv-bg@2x.jpg) center center no-repeat;
@@ -82,34 +83,68 @@
     .second-text,
     .third-text {
       width: fit-content;
-      padding: 10px;
       background-color: #fff;
       margin-top: 20px;
     }
-  }
+}
 }
 
 //バックナンバー
 
 .backnumber {
-  display: flex;
   margin-left: 200px;
-  flex-direction: column;
-  flex-grow: 12;
-  flex-wrap: wrap;
+  padding-top: 20px;
   background-color: #f8f8f8;
 
   &-title {
-    display: inline-block;
-    margin: 20px 0px 20px 20px;
+display: block;
+  margin: 0px 0px 20px 20px;
+
+  h3 {
+    font-size: 20px;
   }
 
+  p {
+    font-size: 12px;
+  }
+}
 
-  &-content img {
-      width: calc(50% – 20px) ;
-    }
+&-content {
+  display: flex;
+  flex-wrap: wrap;
+
+  p {
+    padding: 20px;
+    font-weight: 300;
   }
 
+  li span {
+    font-size: 18px;
+    font-weight: 600;
+  }
+
+  @include mq {
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    flex-basis: 100%;
+  }
+}
+
+&-item {
+  display: flex;
+  width: 50%;
+  flex-direction: column;
+  flex-basis: auto;
+  padding: 20px 20px 0;
+
+img {
+    width: 50%;
+    box-shadow: 5px 5px 10px 0px rgba(0, 0, 0, 0.3);
+  }
+}
+  }
+
+//バックナンバー個別背景
   .bn {
     &-101 {
       background: #ecf4f9;
